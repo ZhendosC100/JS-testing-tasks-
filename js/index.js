@@ -37,21 +37,28 @@ let getTargetMonth = () => {
 getTargetMonth();
 
 
-console.log(deposit);
-console.log(`bugetMonth ${bugetMonth}`);
-console.log(`budgetDay ${budgetDay}`);
+let showTypeof = function(item){
+    console.log(item, typeof item);
+};
 
 
+showTypeof(money);
+showTypeof(income);
+showTypeof(deposit);
 
-if(budgetDay < 0){
-    console.log('Что то пошло не так');
-} else if(budgetDay >= 0 && budgetDay <= 300) {
-    console.log('Низкий уровень дохода');
-} else if(budgetDay > 300 && budgetDay <= 800) {
-    console.log('Средний уровень дохода');
-} else {
-    console.log('Высокий уровень дохода');
-}
+(function getStatusIncome(){
+    if(budgetDay < 0){
+        console.log('Что то пошло не так');
+    } else if(budgetDay >= 0 && budgetDay <= 300) {
+        console.log('Низкий уровень дохода');
+    } else if(budgetDay > 300 && budgetDay <= 800) {
+        console.log('Средний уровень дохода');
+    } else {
+        console.log('Высокий уровень дохода');
+    }
+})();
+
+
 
 // console.log(budgetDay);
 // console.log(money%30);
